@@ -1,0 +1,24 @@
+# Create Linux Server & Install/Enable Apache2 Here (Instance 2)
+
+resource "aws_instance" "Instance2" {
+    ami = "ami-0b8b44ec9a8f90422"
+    instance_type = "t2.micro"
+    availability_zone = "us-east-2b"
+    key_name = "Terraform"
+    network_interface {
+      device_index = 0
+      network_interface_id = aws_network_interface.testeni2.id
+   }
+
+ user_data = <<-EOF
+   #!/bin/bash
+   sudo apt update -y
+   sudo apt install apache2 -y
+   sudo systemctl start apache2
+   sudo systemctl enable apache2
+   EOF
+   
+   tags = {
+     Name = "Instance2" 
+    }
+}
