@@ -1,0 +1,6 @@
+# Associate Public Route Table with Public Subnet
+
+resource "aws_route_table_association" "testassoc1" {
+        subnet_id = aws_subnet.testsbnt1.id
+        route_table_id = aws_route_table.testrtb1.id
+}
