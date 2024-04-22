@@ -8,5 +8,4 @@ resource "aws_subnet" "testsbnt1" {
    tags = {
        Name = "testsbnt1"
     } 
-
 }
