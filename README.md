@@ -1,7 +1,7 @@
 # Terraform-Case-Study
 Terraform-Case-Study
 
-**For a detailed solution to this assignment, click this link:** https://medium.com/devops-guides/creating-an-architecture-using-terraform-on-aws-case-study-7cd9c1857873
+**For a detailed solution to this case study, click this link:** https://medium.com/devops-guides/creating-an-architecture-using-terraform-on-aws-case-study-7cd9c1857873
 
 
 **Step 1:**  Create an EC2 Instance using the Ubuntu AMI.
