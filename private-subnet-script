@@ -1,0 +1,11 @@
+# Create a Private Subnet
+resource "aws_subnet" "testsbnt2" {
+    vpc_id = aws_vpc.testvpc.id
+    cidr_block = "10.0.2.0/24"
+      map_public_ip_on_launch = "false"
+      availability_zone = "us-east-2b"
+
+     tags = {
+       Name = "testsbnt2"
+     } 
+}
