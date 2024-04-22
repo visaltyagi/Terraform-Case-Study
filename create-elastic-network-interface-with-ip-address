@@ -1,0 +1,13 @@
+# Assign ENI with IP
+
+resource "aws_network_interface" "testeni1" {
+           subnet_id = aws_subnet.testsbnt1.id
+           private_ips = ["10.0.1.10"]
+           security_groups = [aws_security_group.testsg.id]
+}
+
+resource "aws_network_interface" "testeni2" {
+           subnet_id = aws_subnet.testsbnt2.id
+           private_ips = ["10.0.2.10"]
+           security_groups = [aws_security_group.testsg.id]
+}
