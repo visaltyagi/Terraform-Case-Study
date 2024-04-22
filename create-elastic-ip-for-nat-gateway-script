@@ -1,0 +1,10 @@
+# Create an Elastic IP Address for NAT Gateway
+
+resource "aws_eip" "testeip2" {
+        domain = "vpc"
+        associate_with_private_ip = "10.0.2.10"
+        depends_on= [aws_internet_gateway.testigw]
+        tags = {
+           Name = "testeip2"
+        }
+}
